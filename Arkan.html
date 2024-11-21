@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Arkan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gradient-1: linear-gradient(135deg, #6366f1, #8b5cf6);
+            --gradient-2: linear-gradient(135deg, #ec4899, #f43f5e);
+            --gradient-3: linear-gradient(135deg, #14b8a6, #0ea5e9);
+            --primary: #2e1065;
+            --secondary: #f8fafc;
+            --accent: #7c3aed;
+            --text-light: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--gradient-1);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0.5em;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .profile {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: -4rem auto 4rem;
+            text-align: center;
+            max-width: 800px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-top: -100px;
+        }
+
+        .profile h2 {
+            font-size: 2em;
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .profile p {
+            color: var(--text-light);
+            font-size: 1.2em;
+            margin-bottom: 1rem;
+        }
+
+        .skills {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .skill-tag {
+            background: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.3em;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .project-content p {
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8em;
+            color: var(--accent);
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 1024px) {
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            .profile {
+                padding: 2rem 1rem;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .profile img {
+                width: 150px;
+                height: 150px;
+                margin-top: -75px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile">
+            <img src="Pas Foto Arkan 4x6.jpg" alt="Profile Picture">
+            <h2>Muhammad Arkan Raihan</h2>
+            <p>Software Developer & Cloud Engineer</p>
+            <div class="skills">
+                <span class="skill-tag">Cloud Engineer</span>
+                <span class="skill-tag">Full Stack Developer</span>
+                <span class="skill-tag">DevOps</span>
+            </div>
+        </div>
+
+        <div class="projects">
+            <div class="project">
+                <div class="project-image">
+                    <img src="Fira.jpg" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <h3>Cloud Solutions Architecture</h3>
+                    <p>Google Cloud Platform design and implementation for enterprise solutions</p>
+                    <div class="project-tags">
+                        <span class="tag">GCP</span>
+                        <span class="tag">Cloud Architect</span>
+                        <span class="tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project">
+                <div class="project-image">
+                    <img src="Fre.webp" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Web Developer</h3>
+                    <p>Developed scalable and responsive web applications</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Full Stack</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project">
+                <div class="project-image">
+                    <img src="mi.jpeg" alt="Project 3">
+                </div>
+                <div class="project-content">
+                    <h3>DevOps CI/CD Pipeline</h3>
+                    <p>Automated software delivery processes with Jenkins and Docker</p>
+                    <div class="project-tags">
+                        <span class="tag">DevOps</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project">
+                <div class="project-image">
+                    <img src="wink.jpeg" alt="Project 4">
+                </div>
+                <div class="project-content">
+                    <h3>IoT Device Management</h3>
+                    <p>Integrated IoT devices with a cloud-based control system</p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Azure IoT</span>
+                        <span class="tag">Device Management</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project">
+                <div class="project-image">
+                    <img src="formal.jpeg" alt="Project 5">
+                </div>
+                <div class="project-content">
+                    <h3>Blockchain Smart Contract</h3>
+                    <p>Developed and audited smart contracts for secure transactions</p>
+                    <div class="project-tags">
+                        <span class="tag">Blockchain</span>
+                        <span class="tag">Solidity</span>
+                        <span class="tag">Smart Contract</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project">
+                <div class="project-image">
+                    <img src="unformal.jpeg" alt="Project 6">
+                </div>
+                <div class="project-content">
+                    <h3>RESTful API Development</h3>
+                    <p>Created RESTful APIs for scalable and secure applications</p>
+                    <div class="project-tags">
+                        <span class="tag">API</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2024 Muhammad Arkan Raihan | Building the Future with Code</p>
+    </footer>
+</body>
+</html>
